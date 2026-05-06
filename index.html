@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corvette Dashboard - I/O Control</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏁 Corvette Dashboard</h1>
+            <p class="subtitle">Touch Screen I/O Control Panel</p>
+        </header>
+
+        <!-- Status Panel -->
+        <section class="status-panel">
+            <h2>System Status</h2>
+            <div class="status-grid">
+                <div class="status-item">
+                    <span class="status-label">Ignition</span>
+                    <span class="status-value" id="status-ignition">OFF</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">Accessory</span>
+                    <span class="status-value" id="status-acc">OFF</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">Start</span>
+                    <span class="status-value" id="status-start">OFF</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">Fuel Pump</span>
+                    <span class="status-value" id="status-fuel">OFF</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">Lights</span>
+                    <span class="status-value" id="status-lights">OFF</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">Engine</span>
+                    <span class="status-value" id="status-engine">OFF</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Control Buttons -->
+        <section class="button-panel">
+            <h2>Control Buttons</h2>
+            <div class="button-grid">
+                <!-- Ignition Button -->
+                <button class="control-btn ignition-btn" id="btn-ignition" data-control="ignition">
+                    <span class="btn-icon">🔑</span>
+                    <span class="btn-label">Ignition</span>
+                    <span class="btn-status">OFF</span>
+                </button>
+
+                <!-- Accessory Button -->
+                <button class="control-btn acc-btn" id="btn-acc" data-control="acc">
+                    <span class="btn-icon">📻</span>
+                    <span class="btn-label">Accessory</span>
+                    <span class="btn-status">OFF</span>
+                </button>
+
+                <!-- Start Button -->
+                <button class="control-btn start-btn" id="btn-start" data-control="start">
+                    <span class="btn-icon">⚙️</span>
+                    <span class="btn-label">Start</span>
+                    <span class="btn-status">OFF</span>
+                </button>
+
+                <!-- Fuel Button -->
+                <button class="control-btn fuel-btn" id="btn-fuel" data-control="fuel">
+                    <span class="btn-icon">⛽</span>
+                    <span class="btn-label">Fuel Pump</span>
+                    <span class="btn-status">OFF</span>
+                </button>
+
+                <!-- Lights Button -->
+                <button class="control-btn lights-btn" id="btn-lights" data-control="lights">
+                    <span class="btn-icon">💡</span>
+                    <span class="btn-label">Lights</span>
+                    <span class="btn-status">OFF</span>
+                </button>
+
+                <!-- Engine Button -->
+                <button class="control-btn engine-btn" id="btn-engine" data-control="engine">
+                    <span class="btn-icon">🔧</span>
+                    <span class="btn-label">Engine</span>
+                    <span class="btn-status">OFF</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Control Panel -->
+        <section class="action-panel">
+            <button class="reset-btn" id="btn-reset">🔄 Reset All</button>
+            <div class="info-text">
+                <small>Click any button to toggle control. Click "Reset All" to turn off everything.</small>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
